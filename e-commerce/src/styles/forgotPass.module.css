@@ -1,0 +1,167 @@
+/* forgotPass.module.css */
+.fpassContainer {
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    font-family: 'Rethink Sans';
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+}
+
+.progressBar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.activeProgress {
+  height: 3px;
+  width: 50%;
+  background-color: black; /* Active step color */
+  transition: background-color 0.3s ease;
+}
+
+.inactiveProgress {
+  height: 3px;
+  width: 50%;
+  background-color: gray; /* Inactive step color */
+  transition: background-color 0.3s ease;
+}
+
+.stepContent {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 10px;
+}
+
+.back {
+  font-size: 40px; 
+  cursor: pointer;
+  color: #000;
+}
+
+.stepDetails {
+  flex-grow: 1; /* Ensures the titles use available space */
+  text-align: left;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.stepDescription {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+form {
+  width: 100%;
+}
+
+form label {
+  font-family: 'Rethink Sans';
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  position: relative; 
+}
+
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #888;
+  border-radius: 7px;
+  font-family: 'Rethink Sans';
+  font-size: 17px;
+}
+
+.inputIcon {
+  color: #000;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0 10px 0 -40px;
+}
+
+.input:hover {
+  border: 2px solid #000;
+}
+ 
+.nextBtn, .upPassBtn {
+    width: 95%;
+    padding: 12px 0 12px 0;
+    margin: 10px 0 0 10px;
+    background-color: #000;
+    color: white;
+    opacity: 95%;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nextBtn:hover, .upPassBtn:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+.stepHeader button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+} 
+
+.errorInputContainer {
+  margin-bottom: 5px;
+}
+
+.errorInput {
+  border: 2px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-family: "Rethink Sans";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.errorIcon {
+  font-size: 16px;
+}

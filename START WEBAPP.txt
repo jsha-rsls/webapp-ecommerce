@@ -1,0 +1,8 @@
+Right-Click 'e-commerce' folder then Click 'Open in Integrated Terminal' then Type 'npm start'
+
+To start PHP Server
+Right-Click 'php' folder then Click 'Open in Integrated Terminal' then Type 'php -S localhost:8000'
+
+
+Dipende yung port sa kung anong want mo pero ginagamit ko Port: 8000
+Sa localhost (web)(npm start) default naman yata yung Port: 3000

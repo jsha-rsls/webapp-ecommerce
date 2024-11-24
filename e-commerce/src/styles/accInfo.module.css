@@ -1,0 +1,336 @@
+
+.container {
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: -40px;
+    padding: 20px;
+    font-family: 'Rethink Sans';
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+}
+
+.progressBar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.activeProgress {
+  height: 3px;
+  width: 50%;
+  background-color: black; /* Active step color */
+  transition: background-color 0.3s ease;
+}
+
+.inactiveProgress {
+  height: 3px;
+  width: 50%;
+  background-color: gray; /* Inactive step color */
+  transition: background-color 0.3s ease;
+}
+
+.stepContent {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-bottom: 10px;
+}
+
+.stepHeader button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+} 
+
+.back {
+  font-size: 40px; 
+  cursor: pointer;
+  color: #000;
+}
+
+.stepDetails {
+  flex-grow: 1; /* Ensures the titles use available space */
+  text-align: left;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 16px;
+}
+
+.stepDescription {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+form {
+  width: 100%;
+}
+
+form label {
+  font-family: 'Rethink Sans';
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+form p {
+  margin-left: 10px;
+  color: #5a5a5a;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  position: relative; 
+}
+
+.input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 2px solid #888;
+  border-radius: 7px;
+  font-family: 'Rethink Sans';
+  font-size: 17px;
+}
+
+.input:hover {
+  border: 2px solid #000;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 30px;
+  margin: 10px 0 10px 0;
+  
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radioGroup input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.radioInput {
+  appearance: none; 
+  width: 18px; 
+  height: 18px;
+  border: 1px solid black; 
+  border-radius: 50%; 
+  outline: none;
+  cursor: pointer;
+  background-color: white; 
+  position: relative;
+}
+
+.radioInput:checked {
+  background-color: black; 
+}
+
+.radioInput:checked::before {
+  content: '';
+  width: 10px; 
+  height: 10px;
+  border-radius: 50%; 
+  background-color: white; 
+  position: absolute;
+  top: 3px;
+  left: 3px; 
+}
+
+.dobGroup {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 10px 0 10px 10px;
+  position: relative;
+}
+
+.dobGroup input {
+  width: 70px;
+  height: 50px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font-family: "Rethink Sans";
+  font-size: 17px;
+  position: relative;
+}
+
+.dobGroup input:hover {
+  border: 2px solid #000;
+}
+
+.monthInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.monthInputWrapper input {
+  cursor: pointer;
+  width: 120px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.chevronIcon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.monthDropdown {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid #888;
+  border-radius: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.monthOption {
+  padding: 8px 10px;
+  cursor: pointer;
+  font-family: "Rethink Sans";
+  font-size: 14px;
+}
+
+.monthOption:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.nextBtn, .signUpBtn {
+  width: 95%;
+  padding: 12px 0 12px 0;
+  margin: 10px 0 0 10px;
+  background-color: #000;
+  color: white;
+  opacity: 95%;
+  border: none;
+  border-radius: 7px;
+  font-family: 'Rethink Sans';
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nextBtn:hover, .signUpBtn:hover {
+  opacity: 100%;
+  transform: scale(1.05);
+}
+
+.googleMap {
+  width: 95%;
+  height: 150px;
+  border: 2px solid #888;
+  border-radius: 5px;
+  margin: 10px 0 5px 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelHW {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.labelHW label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.labelButtons {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 10px -50px;
+}
+
+.labelButton {
+  border: 2px solid #888;
+  font-family: 'Rethink Sans';
+  font-size: 15px;
+  color: #5a5a5a;
+  padding: 10px;
+  margin: 30px 0 10px 0;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.labelButton:hover {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-color: #000;
+}
+
+.labelButton.active {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-color: #000;
+}
+
+.errorInput {
+  border: 2px solid red;
+  margin-bottom: -5px;
+}
+
+.errorMessage {
+  color: red;
+  font-family: "Rethink Sans";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.errorIcon {
+  font-size: 16px;
+}

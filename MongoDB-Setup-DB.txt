@@ -1,0 +1,3 @@
+Database Name: eCommerce
+Collection Name: accounts
+Collection Name: bookpass

@@ -1,0 +1,190 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: -40px;
+    padding: 20px;
+}
+  
+.logo img{
+    width: 160px;
+}
+  
+.title {
+    font-family: 'Rethink Sans';
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.form {
+    width: 100%;
+}
+
+.form h5 {
+    font-family: 'Rethink Sans';
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0 -5px 0;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    border: 2px solid #888;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.input:hover {
+    border: 2px solid #000;
+}
+
+.nextButton {
+    width: 100%;
+    padding: 12px 0 12px 0;
+    margin-top: 10px;
+    background-color: #000;
+    color: white;
+    opacity: 95%;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nextButton:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+.dividerLeft {
+    width: 70%;
+    height: 2px;
+    background-color: #000;
+    margin: 40px 280px 30px 0;
+}
+
+.or {
+    font-family: 'Rethink Sans';
+    font-size: 15px;
+    font-weight: 500;
+    margin: -42px 0 0 0;
+}
+
+.dividerRight {
+    width: 70%;
+    height: 2px;
+    background-color: #000;
+    margin: -10px 0 30px 280px;
+}
+  
+.authButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.authButtons a {
+    text-decoration: none;
+}  
+
+.authButtons button:hover {
+    border: 2px solid #000;
+}
+  
+.googleButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 70px;
+    margin: 5px 0;
+    width: 100%;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.googleButton img{
+    margin-right: 10px;
+    width: 20px;
+}
+
+.policy {
+    width: 140%;
+    text-align: center;
+    margin: 30px 0 50px 0;
+    margin-top: 30px;
+    font-family: 'Rethink Sans';
+    font-weight: 400;
+    font-size: 15px;
+    color: #4d4c4c;
+}
+
+.policy span {  
+    color: #000;
+    opacity: 90%;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.policy span:hover {
+    opacity: 100%;
+}
+
+.extraOptions {
+    text-align: center;
+    color: #3d3c3c;
+}
+
+.loginHere {
+    color: #000;
+    font-family: 'Rethink Sans';
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.loginHere:hover {
+    opacity: 100%;
+}
+
+/* Error input container */
+
+  
+  /* Error input field */
+  .errorInput {
+    border: 2px solid red;
+  }
+  
+  /* Error message styling */
+  .errorMessage {
+    color: red;
+    font-family: 'Rethink Sans';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Adjust error icon size */
+  .errorIcon {
+    font-size: 16px;
+  }
+  

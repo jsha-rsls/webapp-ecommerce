@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.back {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #000;
+}
+  
+.logo img{
+    width: 160px;
+}
+  
+.title {
+    font-family: 'Rethink Sans';
+    font-size: 27px;
+    font-weight: 800;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.form {
+    width: 100%;
+}
+
+.form h5 {
+    font-family: 'Rethink Sans';
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0 -5px 0;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    border: 2px solid #888;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.input:hover {
+    border: 2px solid #000;
+}
+  
+.loginButton {
+    width: 100%;
+    padding: 12px 0 12px 0;
+    margin-top: 10px;
+    background-color: #000;
+    color: white;
+    opacity: 95%;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+.inputGroup {
+    margin-bottom: 10px;
+}
+  
+.errorInput {
+    border: 2px solid red;
+}
+  
+.errorMessage {
+    color: red;
+    font-family: 'Rethink Sans';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+  
+.errorIcon {
+    font-size: 16px;
+}
+  

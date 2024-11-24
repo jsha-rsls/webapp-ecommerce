@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: -40px;
+    padding: 20px;
+}
+  
+.logo img{
+    width: 160px;
+}
+  
+.title {
+    font-family: 'Rethink Sans';
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
+.authButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.authButtons a {
+    text-decoration: none;
+}  
+
+.authButtons button:hover {
+    border: 2px solid #000;
+}
+  
+.googleButton, .bookPassButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 70px;
+    margin: 5px 0;
+    width: 100%;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #ccc;
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.googleButton img, .bookPassButton img{
+    margin-right: 10px;
+    width: 20px;
+}
+  
+.divider {
+    width: 150%;
+    height: 2px;
+    background-color: #000;
+    margin: 20px 0 10px 0;
+}
+  
+.form {
+    width: 100%;
+}
+
+.form h5 {
+    font-family: 'Rethink Sans';
+    font-size: 15px;
+    font-weight: 700;
+    margin: 10px 0 -5px 0;
+}
+  
+.input {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    border: 2px solid #888;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.input:hover {
+    border: 2px solid #000;
+}
+  
+.loginButton {
+    width: 100%;
+    padding: 12px 0 12px 0;
+    margin-top: 10px;
+    background-color: #000;
+    color: white;
+    opacity: 95%;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loginButton:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+.extraOptions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.extraOptions p {
+    margin-top: 30px;
+}
+  
+.forgotPassword, .signUp {
+    color: #000;
+    font-family: 'Rethink Sans';
+    font-weight: 600;
+    font-size: 15px;
+    opacity: 90%;
+}
+
+.forgotPassword:hover, .signUp:hover {
+    opacity: 100%;
+}
+
+.inputGroup {
+    margin-bottom: 10px;
+}
+  
+.errorInput {
+    border: 2px solid red;
+}
+  
+.errorMessage {
+    color: red;
+    font-family: 'Rethink Sans';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+  
+.errorIcon {
+    font-size: 16px;
+}
+  
+  
