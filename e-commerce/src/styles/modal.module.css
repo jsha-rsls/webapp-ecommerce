@@ -1,0 +1,78 @@
+/* modal.module.css */
+
+/* Add this to modal.module.css */
+
+/* Transition for the modal fade-out effect */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200; /* High z-index to appear above other content */
+    opacity: 1; /* Default state */
+    transition: opacity 0.3s ease-in-out; /* Apply transition to opacity */
+  }
+  
+  .modalOverlay.fadeOut {
+    opacity: 0; /* Fade the overlay out */
+  }  
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: #0D0D0D 2px solid;
+    width: 320px;
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.modalHeader h2 {
+    font-size: 24px;  /* Font size should apply now */
+    font-weight: bold;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modalBody {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #0D0D0D;
+    font-weight: 500;
+}
+
+.modalFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.modalButton {
+    background: #0D0D0D;
+    margin-top: 30px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.modalButton:hover {
+    background: #888;
+    transform: scale(1.03);
+}

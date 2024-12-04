@@ -1,0 +1,113 @@
+.container {
+  padding: 20px;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-family: 'Rethink Sans';
+  font-size: 60px;
+  font-weight: 800;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  margin: -180px 0 0 -1050px;
+  text-transform: uppercase;
+}
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -20px 0 0 -600px;
+  position: relative;
+  width: 850px;
+  gap: -10px;
+}
+
+.progressBar::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 15px; /* Make the line thicker */
+  border-radius: 10px;
+  background-color: gray;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.progressBar.active-1::before {
+  background: linear-gradient(to right, black 33.33%, gray 33.33%);
+}
+
+.progressBar.active-2::before {
+  background: linear-gradient(to right, #000000 66.66%, gray 66.66%);
+}
+
+.progressBar.active-3::before {
+  background: black;
+}
+
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+  margin: 30px 10px 0 10px;
+  transition: all 0.3s ease;
+}
+
+.step {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background-color: yellow;
+  border: 3px solid white;
+}
+
+/* Unique active colors for individual steps */
+.stepContainer:nth-child(1) .step.active {
+  background-color: #F8D952; /* First step's active color */
+}
+
+.stepContainer:nth-child(2) .step.active {
+  background-color: #A2C579; /* Second step's active color */
+}
+
+.stepContainer:nth-child(3) .step.active {
+  background-color: #FF4B4E; /* Third step's active color */
+}
+
+.icon {
+  font-size: 24px;
+  color: black;
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 200px;
+  color: black;
+}
+
+.content {
+  margin-top: 30px;
+  font-size: 16px;
+}

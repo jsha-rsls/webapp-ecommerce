@@ -4,12 +4,12 @@
     align-items: center;
     max-width: 400px;
     margin: auto;
-    margin-top: -40px;
+    margin-top: 60px;
     padding: 20px;
 }
   
 .logo img{
-    width: 160px;
+    width: 180px;
 }
   
 .title {
@@ -54,9 +54,8 @@
     margin-top: 10px;
     background-color: #000;
     color: white;
-    opacity: 95%;
     border: none;
-    border-radius: 7px;
+    border-radius: 50px;
     font-family: 'Rethink Sans';
     font-size: 17px;
     cursor: pointer;
@@ -64,7 +63,7 @@
 }
 
 .nextButton:hover {
-    opacity: 100%;
+    opacity: 90%;
     transform: scale(1.05);
 }
 

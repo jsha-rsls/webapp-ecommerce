@@ -1,15 +1,514 @@
 /* src/styles/home.module.css */
 
 .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
     width: 100%;
-    height: 400px;
-    background-color: #eeebe0;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+    margin-top: 80px;
+}
+  
+.swiper {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+  
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  color: black !important;
+  background-color: white !important; 
+  width: 40px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+:global(.swiper-button-next:hover),
+:global(.swiper-button-prev:hover) {
+  background-color: rgba(255, 255, 255, 0.9) !important; 
 }
 
 
+:global(.swiper-pagination-bullet) {
+  background-color: transparent !important;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin: 0 5px;
+  opacity: 0.7;
+}
 
+:global(.swiper-pagination-bullet-active) {
+  background-color: white !important;
+  opacity: 1;
+}
 
+.bookworm {
+  margin-top: 720px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+}
 
+.bookworm h1 {
+  width: 500px;
+  line-height: 50px;
+  font-family: 'Rethink Sans';
+  font-weight: 800;
+  font-size: 60px;
+  margin: 20px 0 0 140px;
+}
+
+.bookworm p {
+  font-family: 'Rethink Sans';
+  font-weight: 600;
+  font-size: 25px;
+  width: 440px;
+  margin: 10px 0 0 140px;
+}
+
+.bwshopBtn {
+  margin: 10px 0 0 140px;
+}
+
+.bwshopBtn button {
+  background-color: #000;
+  color: #fff;
+  width: 120px;
+  font-family: 'Rethink Sans';
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.redbg {
+  width: 600px;
+  height: 410px;
+  background-color: #920000;
+  margin: -30px 0 0 750px;
+  position: absolute;
+}
+
+.linebox {
+  position: absolute;
+  margin: -35px 0 0 35px;
+  border: 4px solid #000;
+  width: 530px;
+  height: 395px;
+}
+
+.girlImg img {
+  width: 95%;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.title {
+  font-family: 'Rethink Sans';
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0 0 20px 20px;
+}
+
+.productSwiperWrapper {
+  display: flex;
+  justify-content: center; 
+  box-sizing: border-box;
+}
+
+.productSwiper :global(.swiper-button-next),
+.productSwiper :global(.swiper-button-prev) {
+  color: white !important;
+  background-color: black!important; 
+  width: 45px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.productSwiper :global(.swiper-button-next:hover),
+.productSwiper :global(.swiper-button-prev:hover) {
+  background-color: #333 !important; 
+  color: #fff !important; 
+}
+
+.productSwiper {
+  display: flex;
+  justify-content: center; /* Center slides */
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.productSwiper :global(.swiper-slide) {
+  display: flex; 
+  justify-content: center; 
+  flex-shrink: 0; 
+  width: auto; 
+  margin: 0; 
+}
+
+.productCardWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the card */
+  margin-bottom: 20px; /* Space between cards */
+}
+
+.productCard {
+  margin: 0; 
+  flex-shrink: 0; 
+  width: 300px;
+  height: 500px;
+  max-width: 300px;
+  border: 1px solid #757575;
+  padding: 45px 30px 20px 30px;
+  text-align: left;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productCard:hover {
+  border: 2px solid #000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.productCardWrapper:hover .addToBucket {
+  display: block; /* Show the button when the product card is hovered */
+}
+
+.addToBucket {
+  display: none;
+  width: 100%; /* Make it the same width as the product card */
+  text-align: center;
+  position: absolute;
+  bottom: -40px; /* Position it just below the product card */
+  background-color: #000;
+  color: white;
+  font-family: 'Rethink Sans';
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.heartWrapper {
+  position: absolute;
+  top: 20px;
+  right: -150px;
+  cursor: pointer;
+}
+
+.heartIcon {
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+}
+
+.heartWrapper:hover .heartIcon {
+  color: black; /* Changes the heart to black */
+}
+
+.heartIconActive {
+  color: black; 
+  cursor: pointer;
+}
+
+.productImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+  border: 2px solid #000;
+}
+
+.productInfo h3 {
+  font-family: 'Rethink Sans';
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.productAuthor {
+  font-family: 'Rethink Sans';
+  font-size: 0.9rem;
+  color: #757575;
+  margin-bottom: 10px;
+}
+
+.productPrice {
+  font-size: 1rem;
+  font-family: 'Rethink Sans';
+}
+
+.currentPrice {
+  font-weight: bold;
+  font-family: 'Rethink Sans';
+  color: #000;
+  margin-right: 5px;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  font-family: 'Rethink Sans';
+  font-size: 13px;
+  color: #9e9e9e;
+  margin-right: 5px;
+}
+
+.discount {
+  font-weight: bold;
+  font-family: 'Rethink Sans';
+  font-size: 13px;
+  color: #d32f2f;
+  margin-left: 10px;
+}
+
+.labels {
+  position: absolute;
+  font-family: 'Rethink Sans';
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+
+.saleLabel {
+  background-color: #920000;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  font-family: 'Rethink Sans';
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 0 5px 15px;
+  width: 75px;
+  margin-left: -10px;
+}
+
+.badgeLabel {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Rethink Sans';
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 20px 5px 15px;
+  margin-left: -10px;
+}
+
+.title2 {
+  font-family: 'Rethink Sans';
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-left: 400px;
+  line-height: 50px;
+  width: 45%;
+}
+
+.booksIndependent {
+  width: 60%;
+  margin-left: -60px;
+}
+
+.orangebox {
+  background-color: #FC4C02;
+  width: 380px;
+  height: 170px;
+  position: absolute;
+  margin: 315px 0 0 600px;
+}
+
+.boxIndependent {
+  border: 3px solid #000;
+  border-radius: 10px;
+  width: 95%;
+  margin: 40px 0 0 100px;
+  padding: 18px 18px 40px 25px; 
+  font-family: 'Rethink Sans';
+  position: relative;
+}
+
+.booksIndependent h4 {
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.boxIndependent p {
+  width: 60%;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.booksIndependent button {
+  background-color: #000;
+  color: #fff;
+  width: 140px;
+  font-family: 'Rethink Sans';
+  font-weight: 700;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.booksIndependent img {
+  position: absolute;
+  margin: -350px 0 0 660px;
+  width: 315px;
+}
+
+.booksEmergent {
+  margin-left: 160px;
+}
+
+.boxEmergent {
+  border: 3px solid #000;
+  border-radius: 10px;
+  width: 40%;
+  font-family: 'Rethink Sans';
+  background: #632DE9;
+  margin: -460px 0 0 780px;
+  padding: 17px 17px 40px 17px;
+}
+
+.boxEmergent img {
+  width: 350px;
+  height: 380px;
+  position: relative;
+  margin-left: 70px;
+}
+
+.boxEmergent h3 {
+  background-color: #000;
+  width: 160px;
+  color: #fff;
+  margin: -65px 0 -4px 300px;
+  line-height: 30px;
+  text-align: right;
+  padding: 10px 10px 13px 15px;
+  font-size: 30px;
+  position: relative;
+}
+
+.boxEmergent span {
+  background-color: #000;
+  width: 160px;
+  color: #fff;
+  margin-left: 326px;
+  line-height: 30px;
+  text-align: right;
+  font-size: 30px;
+  padding: 0 10px 7px 15px;
+  font-weight: bold;
+}
+
+.booksAvid {
+  margin: 35px 0 0 40px;
+}
+
+.boxAvid {
+  border: 3px solid #000;
+  border-radius: 10px;
+  width: 37%;
+  height: 490px;
+  font-family: 'Rethink Sans';
+  background: #DD0F23;
+  padding: 17px 0 30px 17px;
+}
+
+.boxAvid h3 {
+  background-color: #000;
+  width: 90px;
+  color: #fff;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px 10px 5px 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+.boxAvid span {
+  background-color: #000;
+  width: 160px;
+  color: #fff;
+  line-height: 30px;
+  text-align: right;
+  font-size: 30px;
+  padding: 0 15px 7px 10px;
+  font-weight: bold;
+}
+
+.boxAvid img {
+  width: 370px;
+  position: relative;
+  margin: -50px 0 0 100px;
+}
+
+.boxToddlers {
+  border: 3px solid #000;
+  border-radius: 10px;
+  width: 57%;
+  height: 59vh;
+  font-family: 'Rethink Sans';
+  position: relative;
+  margin: -490px 0 0 620px;
+}
+
+.boxToddlers h4 {
+  text-align: center;
+  margin-top: 60px;
+  line-height: 40px;
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.boxToddlers p {
+  width: 75%;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 15px 0 0 100px;
+  text-align: center;
+}
+
+.bluebg {
+  background-color: #0092FD;
+  position: absolute;
+  margin: -140px 0 0 890px;
+  width: 300px;
+  height: 180px;
+  
+}
+
+.bluebg img {
+  width: 190px;
+  margin: -15px 0 0 55px;
+  position: relative;
+}

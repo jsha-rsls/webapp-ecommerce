@@ -3,7 +3,7 @@
     align-items: center;
     max-width: 400px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 80px;
     padding: 20px;
     font-family: 'Rethink Sans';
 }
@@ -14,7 +14,7 @@
 }
 
 .logo img {
-  width: 160px;
+  width: 180px;
   max-width: 100%;
   height: auto;
 }
@@ -124,9 +124,8 @@ form label {
     margin: 10px 0 0 10px;
     background-color: #000;
     color: white;
-    opacity: 95%;
     border: none;
-    border-radius: 7px;
+    border-radius: 50px;
     font-family: 'Rethink Sans';
     font-size: 17px;
     cursor: pointer;
@@ -134,7 +133,7 @@ form label {
 }
 
 .nextBtn:hover, .upPassBtn:hover {
-    opacity: 100%;
+    opacity: 90%;
     transform: scale(1.05);
 }
 

@@ -105,7 +105,7 @@ form p {
   border-radius: 7px;
   padding: 5px 10px;
   margin-bottom: 10px;
-  position: relative; 
+  position: relative;
 }
 
 .input {
@@ -115,6 +115,7 @@ form p {
   border-radius: 7px;
   font-family: 'Rethink Sans';
   font-size: 17px;
+  position: relative;
 }
 
 .input:hover {
@@ -245,18 +246,162 @@ form p {
   margin: 10px 0 0 10px;
   background-color: #000;
   color: white;
-  opacity: 95%;
   border: none;
-  border-radius: 7px;
+  border-radius: 50px;
   font-family: 'Rethink Sans';
+  font-weight: 700;
   font-size: 17px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .nextBtn:hover, .signUpBtn:hover {
-  opacity: 100%;
+  opacity: 90%;
   transform: scale(1.05);
+}
+
+.googleMap {
+  width: 95%;
+  height: 150px;
+  border: 2px solid #888;
+  border-radius: 5px;
+  margin: 10px 0 5px 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelHW {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.labelHW label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.labelButtons {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 10px -50px;
+}
+
+.labelButton {
+  border: 2px solid #888;
+  font-family: 'Rethink Sans';
+  font-size: 15px;
+  color: #5a5a5a;
+  padding: 10px;
+  margin: 30px 0 10px 0;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.labelButton:hover {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-color: #000;
+}
+
+.labelButton.active {
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-color: #000;
+}
+
+.errorInput {
+  border: 2px solid red;
+  margin-bottom: -5px;
+}
+
+.errorMessage {
+  color: red;
+  font-family: "Rethink Sans";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.errorIcon {
+  font-size: 16px;
+}
+
+.passwordWrapper {
+  position: relative;
+}
+
+.passwordWrapper input {
+  width: 95%; /* Ensures input takes the full width */
+  padding-right: 60px; /* Adds space on the right for the eye icon */
+  box-sizing: border-box; /* Includes padding in the total width */
+  margin: 10px 0 5px 10px;
+}
+
+.eyeIcon {
+  position: absolute;
+  top: 60%;
+  right: 20px; /* Adjusts the spacing from the right edge */
+  transform: translateY(-50%);
+  cursor: pointer; /* Makes the icon clickable */
+  font-size: 1.5em; /* Adjust the size as needed */
+  color: #888; /* Default color for the icon */
+  transition: color 0.2s ease;
+}
+
+.eyeIcon:hover {
+  color: #000; /* Change the color when hovered */
+}
+
+.dropdown {
+  margin-top: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  color: #5a5a5a;
+}
+
+.dropdown table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dropdown th, .dropdown td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.dropdown th {
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dropdown th:hover {
+  color: #000;
+}
+
+.dropdown th:active-header {
+  color: #000;
+}
+
+.dropdown tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
 }
 
 .googleMap {

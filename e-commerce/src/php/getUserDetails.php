@@ -1,45 +1,36 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: *"); // Allow requests from all origins (for development)
 header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type"); 
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Credentials: true"); // Allow credentials (if needed)
 
-// Include MongoDB library
-require '../../vendor/autoload.php';
+require '../../vendor/autoload.php'; // MongoDB library
+require 'connection-to-accounts.php'; // Database connection
 
-// Use MongoDB\Client namespace
-use MongoDB\Client;
+$collection = getMongoDBCollection(); // Retrieve MongoDB collection
 
-// MongoDB connection
-$client = new Client("mongodb://localhost:27017"); 
-$database = $client->eCommerce; // Database name
-$collection = $database->accounts; // Collection name
-
-// Get email from the query string (e.g., ?email=user@example.com)
+// Retrieve email from query parameters
 $email = isset($_GET['email']) ? $_GET['email'] : '';
 
-// Check if email is provided
 if (empty($email)) {
     echo json_encode(['error' => 'Email is required']);
     exit;
 }
 
-// Find the user by email
+// Sanitize email input to prevent injection attacks (even though MongoDB is generally safe)
+$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+// Find the user in the MongoDB collection by email
 $user = $collection->findOne(['email' => $email]);
 
 if ($user) {
-    // If user found, split the name field into firstName and lastName
-    $nameParts = explode(" ", $user['name']); // Assuming the name is stored as "First Last"
-    $firstName = $nameParts[0] ?? ''; // Default to empty string if no first name
-    $lastName = $nameParts[1] ?? '';  // Default to empty string if no last name
-
-    // Return firstName, lastName, and email
+    // Return the user details
     echo json_encode([
-        'firstName' => $firstName, 
-        'lastName' => $lastName,
+        'username' => $user['username'] ?? 'Guest', // Default to 'Guest' if username is missing
         'email' => $user['email']
     ]);
 } else {
-    // User not found
+    // Handle case where the user does not exist
     echo json_encode(['error' => 'User not found']);
 }
 ?>

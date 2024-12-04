@@ -1,0 +1,67 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+    height: 400px;
+    background-color: #CBC7C7;
+}
+
+.navbar {
+    display: flex;
+    margin-top: 150px;
+    width: 95%;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    flex: 1; 
+    padding: 30px 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Rethink Sans';
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navItem svg { /* Styling for icons */
+    font-size: 27px; 
+    margin-bottom: 15px; 
+}
+
+.navItem:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.active {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+
+/* Footer CSS */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  
+  /* Content area */
+  .content {
+    margin-top: 60px;
+    padding-bottom: 60px; 
+    min-height: calc(100vh - 520px); 
+  }
+  
+
+
+
+  

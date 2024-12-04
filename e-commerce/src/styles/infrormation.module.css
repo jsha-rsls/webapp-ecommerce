@@ -1,0 +1,260 @@
+.container {
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: -40px;
+    padding: 20px;
+    font-family: 'Rethink Sans';
+}
+
+.stepContent {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 100%;
+  }
+  
+form label {
+    font-family: 'Rethink Sans';
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+  
+form p {
+    margin-left: 10px;
+    color: #5a5a5a;
+}
+  
+.inputContainer {
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+  
+.input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #888;
+    border-radius: 7px;
+    font-family: 'Rethink Sans';
+    font-size: 17px;
+    position: relative;
+}
+
+.input:hover {
+    border: 2px solid #000;
+  }
+  
+.radioGroup {
+    display: flex;
+    gap: 30px;
+    margin: 10px 0 10px 0;
+}
+  
+.radioGroup label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+  
+ .radioGroup input {
+    margin-right: 8px;
+    cursor: pointer;
+}
+  
+.radioInput {
+    appearance: none; 
+    width: 18px; 
+    height: 18px;
+    border: 1px solid black; 
+    border-radius: 50%; 
+    outline: none;
+    cursor: pointer;
+    background-color: white; 
+    position: relative;
+}
+
+.radioInput:checked {
+    background-color: black; 
+}
+  
+.radioInput:checked::before {
+    content: '';
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%; 
+    background-color: white; 
+    position: absolute;
+    top: 3px;
+    left: 3px; 
+}
+  
+.dobGroup {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin: 10px 0 10px 10px;
+    position: relative;
+}
+  
+.dobGroup input {
+    width: 70px;
+    height: 50px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-family: "Rethink Sans";
+    font-size: 17px;
+    position: relative;
+}
+
+.dobGroup input:hover {
+    border: 2px solid #000;
+}
+  
+.monthInputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+.monthInputWrapper input {
+    cursor: pointer;
+    width: 120px;
+    text-align: left;
+    padding-left: 20px;
+}
+  
+.chevronIcon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+  
+.monthDropdown {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 120px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.monthOption {
+    padding: 8px 10px;
+    cursor: pointer;
+    font-family: "Rethink Sans";
+    font-size: 14px;
+  }
+  
+.monthOption:hover {
+    background-color: #000;
+    color: #fff;
+}
+  
+.savedBtn {
+    width: 95%;
+    padding: 12px 0 12px 0;
+    margin: 10px 0 0 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Rethink Sans';
+    font-weight: 700;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.changeCurrentpass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #888;
+}
+
+.changeCurrentpass label {
+    font-family: 'Rethink Sans';
+    font-size: 16px;
+
+}
+
+.checkbox {
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    accent-color: #000;
+}
+  
+.savedBtn:hover {
+    opacity: 90%;
+    transform: scale(1.05);
+}
+
+.errorInput {
+    border: 2px solid red;
+    margin-bottom: -5px;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-family: "Rethink Sans";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .errorIcon {
+    font-size: 16px;
+  }
+
+  .passwordWrapper {
+    position: relative;
+  }
+  
+  .passwordWrapper input {
+    width: 100%; /* Ensures input takes the full width */
+    padding-right: 40px; /* Adds space on the right for the eye icon */
+    box-sizing: border-box; /* Includes padding in the total width */
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    top: 55%;
+    right: 20px; /* Adjusts the spacing from the right edge */
+    transform: translateY(-50%);
+    cursor: pointer; /* Makes the icon clickable */
+    font-size: 1.5em; /* Adjust the size as needed */
+    color: #888; /* Default color for the icon */
+    transition: color 0.2s ease;
+  }
+  
+  .eyeIcon:hover {
+    color: #000; /* Change the color when hovered */
+  }
+

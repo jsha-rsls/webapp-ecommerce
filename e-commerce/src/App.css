@@ -1,9 +1,17 @@
+@font-face {
+  font-family: 'Rethink Sans';
+  src: url('../src/assets/fonts/RethinkSans-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+}
+
+
 header {
   position: fixed;
   width: 100%;
   align-items: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: top 0.3s ease;
+  z-index: 2000;
 }
 
 /* Navbar adjustments for alignment */
@@ -19,8 +27,8 @@ header {
 
 
 .top-header {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,6 +49,7 @@ header {
   font-weight: 500;
   letter-spacing: 0.2px;
   text-align: left;
+  margin-left: 15px;
 }
 
 .user-info {
@@ -152,7 +161,7 @@ header {
 .logo-girl {
   position: absolute;
   top: 70%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -162,6 +171,20 @@ header {
 .logo-girl img {
   width: 320px;
   height: auto;
+}
+
+.home-logo {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-logo img {
+  width: 250px;
 }
 
 .icons {
@@ -296,36 +319,111 @@ header {
   max-height: 365px; /* Set height when visible */
 }
 
-.menu.visible {
-  max-height: 365px; 
-}
-
 /* Menu section styling */
-.menu-section {
+.menu-container {
   width: 80%;
   max-width: 300px;
-  margin: 1em 0;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Rethink Sans';
+}
 
+.menu-section {
+  margin: 60px 90px 0 -420px;
 }
 
 .menu-section h3 {
-  font-size: 1em;
-  font-weight: bold;
-  color: #3D2C29;
+  font-size: 23px;
+  font-weight: 800;
+  color: #000;
   margin-bottom: 0.5em;
+  width: 150%;
 }
 
 .menu-section ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .menu-section ul li {
   margin: 0.5em 0;
   cursor: pointer;
-  color: #36454F;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.menu-section ul a {
+  text-decoration: none; 
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.menu-section ul li:hover {
+  color: #313131; 
+}
+
+.option-container {
+  margin: 60px -120px 0 0;
+}
+
+.payment-section {
+  margin-bottom: 30px;
+}
+
+.payment-section h3 {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 0.2em;
+}
+
+.payment-section img {
+    width: 40px;
+    margin-left: -5px;
+}
+
+.payment-section p {
+  font-size: 17px;
+  font-weight: 700;
+  margin: -35px 0 0 50px;
+  width: 180px;
+}
+
+.social-media h3 {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.media-platform {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.footerImg {
+  width: 40px;
+}
+
+.footerImg img {
+  margin: 100px 0 0 300px;
+  position: relative;
+}
+
+.footer-linebox {
+  width: 170px;
+  position: absolute;
+  height: 120px;
+  border: 3px solid #000;
+  border-radius: 30px;
+  margin: 75px 0 0 290px;
+}
+
+
+
+.menu.visible.close {
+  max-height: 300px;
+}
 
 /* Burger animations */
 .burger-bar.clicked:nth-child(1) {
@@ -396,42 +494,97 @@ header {
   cursor: pointer;
   transition: transform 0.3s ease;
   border-radius: 8px;
+  position: relative;
+  overflow: hidden;
 }
 
 .menu .reader-category:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* Image styling */
 .menu .reader-image {
-  margin-top: 35px;
+  margin-top: 55px;
   width: 200px; /* Fixed width */
   height: 200px; /* Fixed height */
   background-color: #e6e6e6;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 20px;
   transition: border-bottom 0.3s ease; /* Smooth transition for the bottom border */
 }
 
-/* Label styling */
-.menu .reader-label {
-  margin-top: 10px; /* Reduced margin to ensure the label is closer to the image */
-  font-size: 16px;
+.menu .reader-image img {
+  margin-top: 50px;
+}
+
+.menu .reader-category .hover-text {
+  position: absolute;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Rethink Sans', sans-serif;
   font-weight: bold;
-  color: #333;
+  font-size: 28px;
+  margin-top: 55px;
+  text-align: center;
+  padding: 10px;
   text-transform: uppercase;
-  transition: border-bottom 0.3s ease; /* Smooth transition for the bottom border */
-  padding-bottom: 5px; /* Add some space for the border */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
-/* Hover effect for image and label */
-.menu .reader-category:hover .reader-label,
-.menu .reader-image:hover + .reader-label {
-  border-bottom: 4px solid #000; /* Apply bottom border on hover */
+.menu .reader-category:hover .hover-text {
+  opacity: 1; /* Show on hover */
 }
 
-.menu .reader-label:hover {
-  border-bottom: 4px solid #000; /* Ensure border appears when label is hovered */
+/* Hover effect: hide image, show text */
+.menu .reader-category:hover .reader-image img {
+  opacity: 0; /* Fade out the image */
+}
+
+/* Category-Specific Styles */
+.menu .reader-category.toddlers:hover .reader-image {
+  background-color: #0092FD; 
+}
+
+.menu .reader-category.emergent:hover .reader-image {
+  background-color: #632DE9; 
+}
+
+.menu .reader-category.independent:hover .reader-image {
+  background-color: #FC4C02;
+}
+
+.menu .reader-category.avid:hover .reader-image {
+  background-color: #E91429;
+}
+
+.menu .shop-by-reader .close {
+  background-color: #0D0D0D;
+  color: #fff;
+  position: absolute;
+  top: 325px;
+  right: 708px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex; 
+  align-items: center; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;
+}
+
+.menu .shop-by-reader .close span {
+  display: flex; 
+  align-items: center; 
+  text-transform: uppercase;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu .shop-by-reader .close span .close-icon {
+  margin-left: 10px; 
 }
 
 
@@ -449,3 +602,263 @@ header {
   }
 }
 
+/* Shop by Book Genre*/
+.menu .shop-by-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px; /* Space between wrappers */
+  column-gap: 60px;
+  row-gap: 30px;
+  justify-content: space-evenly;
+  width: 70%;
+  padding: 30px;
+}
+
+.menu .category-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack category and label */
+  align-items: center;    /* Center-align both elements */
+  text-align: center;
+  flex: 1 1 auto; /* Allows content to grow/shrink naturally */
+  max-width: none;
+}
+
+.menu .genre-category {
+  display: flex;
+  flex-direction: column; /* Stack the image and label vertically */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu .genre-category:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.menu .category-image {
+  margin-top: 20px;
+  width: 120px; /* Fixed width */
+  height: 120px; /* Fixed height */
+  background-color: #e6e6e6;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  transition: border-bottom 0.3s ease; /* Smooth transition for the bottom border */
+}
+
+.menu .category-image img {
+  margin-top: 20px;
+}
+
+.menu .genre-category .hover-text-genre {
+  position: absolute;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.menu .genre-category:hover .hover-text-genre {
+  opacity: 1; /* Show on hover */
+}
+
+/* Hover effect: hide image, show text */
+.menu .genre-category:hover .category-image img {
+  opacity: 0; /* Fade out the image */
+}
+
+.menu .genre-category.allGenre:hover .category-image {
+  background-color: #000000;
+}
+
+.menu .genre-category.holidays:hover .category-image {
+  background-color: #DD0F23;
+}
+
+.menu .genre-category.fiction:hover .category-image {
+  background-color: #FC4C02;
+}
+
+.menu .genre-category.emotion:hover .category-image {
+  background-color: #FCB600;
+}
+
+.menu .genre-category.envi:hover .category-image {
+  background-color: #30774B;
+}
+
+.menu .genre-category.bedtime:hover .category-image {
+  background-color: #0092FD;
+}
+
+.menu .genre-category.educ:hover .category-image {
+  background-color: #632DE9;
+}
+
+.menu .genre-category.famlife:hover .category-image {
+  background-color: #FF8AA0;
+}
+
+.menu .genre-category.religious:hover .category-image {
+  background-color: #A8B3CB;
+}
+
+.menu .genre-category.historical:hover .category-image {
+  background-color: #E5A13B;
+}
+
+/* Active state styles for All Genre */
+.menu .genre-category.allGenre.active .category-image {
+  background-color: #000000; /* Same hover color */
+}
+
+.menu .genre-category.allGenre.active .hover-text-genre {
+  opacity: 1; /* Show hover text */
+}
+
+.menu .genre-category.global-hover .category-image img {
+  opacity: 0; 
+}
+
+.menu .genre-category.global-hover .hover-text-genre {
+  opacity: 1;
+}
+
+/* Apply global-hover styles to match category-image dimensions */
+.menu .genre-category.global-hover .category-image {
+  width: 120px; /* Same width */
+  height: 120px; /* Same height */
+  border-radius: 20px; /* Same border-radius */
+  transition: all 0.3s ease; /* Add smooth animation for consistency */
+}
+
+
+/* Apply hover effects globally when .global-hover is active */
+.menu .genre-category.global-hover.fiction .category-image {
+  background-color: #FC4C02; /* Fiction's hover color */
+}
+
+.menu .genre-category.global-hover.holidays .category-image {
+  background-color: #DD0F23; /* Holidays' hover color */
+}
+
+.menu .genre-category.global-hover.emotion .category-image {
+  background-color: #FCB600; /* Emotions' hover color */
+}
+
+.menu .genre-category.global-hover.envi .category-image {
+  background-color: #30774B; /* Environmental Responsibility */
+}
+
+.menu .genre-category.global-hover.bedtime .category-image {
+  background-color: #0092FD; /* Bedtime Stories */
+}
+
+.menu .genre-category.global-hover.educ .category-image {
+  background-color: #632DE9; /* Educational */
+}
+
+.menu .genre-category.global-hover.famlife .category-image {
+  background-color: #FF8AA0; /* Family Life */
+}
+
+.menu .genre-category.global-hover.religious .category-image {
+  background-color: #A8B3CB; /* Religious Themes */
+}
+
+.menu .genre-category.global-hover.historical .category-image {
+  background-color: #E5A13B; /* Historical Events */
+}
+
+
+
+.menu .shop-by-category .close {
+  background-color: #0D0D0D;
+  color: #fff;
+  position: absolute;
+  top: 370px;
+  right: 708px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex; 
+  align-items: center; 
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;
+}
+
+.menu .shop-by-category .close span {
+  display: flex; 
+  align-items: center; 
+  text-transform: uppercase;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.menu .shop-by-category .close span .close-icon {
+  margin-left: 10px; 
+}
+
+.category-image p {
+  align-items: center;
+  color: #000;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu.visible.category {
+  max-height: 410px;
+}
+
+
+/* Style the user dropdown */
+.user-dropdown {
+  position: absolute; /* Position it below the user icon */
+  top: 40px; /* Adjust this depending on your icon size */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: #0D0D0D 1px solid;
+  width: 170px;
+  padding: 10px 10px;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-dropdown li {
+  padding: 8px 16px 8px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user-dropdown li:hover {
+  background-color: #E4E3E3;
+}
+
+.user-dropdown li:last-child {
+  color: red;
+}
